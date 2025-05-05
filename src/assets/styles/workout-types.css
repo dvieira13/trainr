@@ -1,0 +1,128 @@
+.workout-types {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.workout {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.workout-header {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 25px;
+}
+
+.workout-header-inner {
+    flex: 1;
+}
+
+.workout .caption-copy {
+    padding-right: 20px;
+    padding-left: 75px;
+}
+
+.workout-left-rail {
+    width: 50px;
+    display: flex;
+    justify-content: end;
+}
+
+.workout-icon {
+    height: 46px;
+}
+
+#tempo_run .workout-icon {
+    height: 36px;
+}
+
+.workout-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.workout-header-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+.workout-icon-container {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.workout-toggle-icon {
+    width: 25px;
+}
+
+.workout-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #8BA974;
+}
+
+@media (max-width: 1279px) {
+    .workout-inner {
+        width: 80%;
+        max-width: 660px;
+    }
+}
+
+@media (max-width: 768px) {
+    .workout {
+        gap: 15px;
+    }
+
+    .workout-inner {
+        width: 85%;
+    }
+
+    .workout .caption-copy {
+        padding-right: 0;
+        padding-left: 46px;
+        font-size: 14px;
+    }
+
+    .workout-header {
+        margin-bottom: 5px;
+        gap: 15px;
+    }
+
+    .workout h4 {
+        font-size: 21px;
+    }
+
+    .workout-toggle-icon {
+        width: 18px;
+    }
+
+    .workout-header-title {
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .workout-left-rail {
+        width: 31px;
+    }
+
+    .workout-icon {
+        height: 25px;
+    }
+
+    #tempo_run .workout-icon {
+        height: 22px;
+    }
+}

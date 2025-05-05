@@ -1,0 +1,166 @@
+/* ACCOUNT FORM STYLES */
+.account-form {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.account-form .trainr-icon {
+    width: 60px;
+    margin: auto;
+}
+
+.account-form-fields {
+    width: 100%;
+}
+
+.account-form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.account-form-item {
+    margin-bottom: 20px;
+}
+
+.account-form-item .caption-copy {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.account-form-item input {
+    width: 100%;
+    border: 1px solid #E7E5D9;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.account-form-item input:focus,
+.account-form-item input:active {
+    border: 1px solid #4C633C;
+    box-shadow: 0 0 1px 1px #4C633C;
+}
+
+.account-form-item-error input {
+    border: 1px solid rgb(176, 49, 49) !important;
+}
+
+.account-form-item-error input:focus,
+.account-form-item-error input:active {
+    box-shadow: 0 0 1px 1px rgb(176, 49, 49) !important;
+}
+
+.account-form-cta {
+    background-color: #8BA974;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+}
+
+.account-form-cta:hover {
+    background-color: #4C633C;
+}
+
+.account-form-cta .body-copy {
+    color: #FFFFFF;
+}
+
+.account-form-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.account-form-footer:hover .bold-text {
+    text-decoration: 1px solid underline #000;
+    text-underline-offset: 3px;
+}
+
+.green-copy {
+    color: #4C633C;
+}
+
+.account-error-message {
+    display: none;
+    margin-bottom: 10px;
+}
+
+.error-active {
+    display: block;
+}
+
+.account-error-message .caption-copy {
+    font-size: 14px;
+}
+
+.trainr-popup .form-cta {
+    margin: 30px auto 0;
+    max-width: 180px;
+    padding: 0 20px;
+}
+
+.form-hyperlink {
+    font-weight: 600;
+    text-decoration: 1px solid underline #000;
+    text-underline-offset: 3px;
+    font-size: 14px !important;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hide-associate-message {
+    display: none !important;
+}
+
+.associate-message p {
+    text-align: center;
+    max-width: 340px;
+}
+
+@media (max-width: 768px) {
+    .account-form {
+        margin: 30px auto 0;
+        gap: 30px;
+    }
+
+    .account-form .trainr-icon {
+        width: 50px;
+    }
+
+    .account-form-footer .caption-copy {
+        font-size: 14px;
+    }
+
+    .account-form-row {
+        display: flex;
+        gap: 15px;
+    }
+
+    .account-form-item {
+        margin-bottom: 15px;
+    }
+
+    .form-hyperlink {
+        font-size: 12px !important;
+    }
+}
+
+/* ACCOUNT FORM STYLES */

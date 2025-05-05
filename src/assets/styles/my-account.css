@@ -1,0 +1,468 @@
+.account-dashboard {
+    width: 90%;
+    max-width: 1800px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.user-panel {
+    width: 360px;
+    height: fit-content;
+    padding: 35px 40px 40px;
+    background-color: #E7E5D9;
+    border-radius: 8px;
+}
+
+.panel-divider {
+    margin: 30px 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
+.user-panel-stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.user-panel-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.user-panel-row .caption-copy {
+    font-size: 48px;
+}
+
+.user-panel .trainr-cta {
+    display: none;
+    background-color: #FFF;
+}
+
+.dashboard-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.arrow .line {
+    width: 100px;
+    max-width: 150px;
+    height: 3px;
+    background-color: #FFF;
+    transition: .8s;
+}
+
+.arrow .head {
+    border: solid #FFF;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 15px;
+    margin-left: -37px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.hide-account-comp {
+    display: none !important;
+}
+
+@media (max-width: 1279px) {
+    .account-dashboard {
+        gap: 30px;
+    }
+
+    .user-panel {
+        width: 330px;
+    }
+}
+
+@media (min-width: 993px) {
+
+    .generate-plan-comp:hover .line,
+    .view-schedule-comp:hover .line {
+        width: 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .account-dashboard {
+        flex-direction: column;
+    }
+
+    .user-panel {
+        width: 100%;
+    }
+
+    .panel-divider {
+        margin: 20px 0;
+    }
+
+    .user-panel-stats {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .account-dashboard {
+        margin: 20px auto;
+    }
+
+    .dashboard-content {
+        gap: 30px;
+    }
+
+    .user-panel {
+        padding: 20px 7% 7%;
+    }
+
+    .user-panel h1 {
+        font-size: 32px;
+    }
+
+    .user-panel-stats {
+        margin-top: 10px;
+    }
+
+    .user-panel-stats .body-copy {
+        font-size: 16px;
+    }
+
+    .user-panel-row .caption-copy {
+        font-size: 37px;
+    }
+}
+
+
+/* GENERATE PLAN COMP STYLES */
+.generate-plan-comp {
+    background-color: #4C633C;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 5%;
+}
+
+.generate-plan-comp h5 {
+    font-weight: 500;
+    max-width: 660px;
+    color: #FFF;
+    text-align: center;
+}
+
+.generate-plan-comp>:first-child {
+    margin-bottom: 15px;
+}
+
+.generate-plan-comp .arrow {
+    margin: 30px auto 0;
+}
+
+@media (max-width: 768px) {
+    .generate-plan-comp {
+        padding: 30px 5%;
+    }
+
+    .generate-plan-comp h5 {
+        font-size: 18px;
+    }
+
+    .generate-plan-comp>:first-child {
+        margin-bottom: 10px;
+    }
+
+    .generate-plan-comp .arrow {
+        margin: 20px auto 0;
+    }
+}
+
+/* GENERATE PLAN COMP STYLES */
+
+/* MY EVENT HEADER COMP STYLES */
+.my-event-header-comp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.my-event-header-comp h2 {
+    font-size: 37px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.my-event-header-comp .trainr-cta {
+    width: 150px;
+}
+
+@media (max-width: 768px) {
+    .my-event-header-comp {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .my-event-header-comp h2 {
+        font-size: 32px;
+    }
+
+    .my-event-header-comp .trainr-cta {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* MY EVENT HEADER COMP STYLES */
+
+/* EVENT COUNTDOWN COMP STYLES */
+.event-countdown-comp {
+    width: 100%;
+    background-color: #4C633C;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    gap: 10px;
+}
+
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.countdown-container p {
+    text-align: center;
+    color: #FFF;
+}
+
+.countdown-number {
+    font-size: 100px;
+    line-height: 100%;
+    margin: 0;
+}
+
+.countdown-container .body-copy {
+    font-weight: 500;
+}
+
+.countdown-divider {
+    height: 100%;
+    width: 1px;
+    background-color: #FFF;
+}
+
+@media (max-width: 1279px) {
+    .countdown-number {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 992px) {
+    .event-countdown-comp .countdown-divider {
+        height: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-countdown-comp {
+        padding: 25px 5%;
+    }
+
+    .countdown-number {
+        font-size: 60px;
+    }
+
+    .countdown-container .body-copy {
+        font-size: 14px;
+    }
+
+    .event-countdown-comp .countdown-divider {
+        height: 86px;
+    }
+}
+
+/* EVENT COUNTDOWN COMP STYLES */
+
+/* TRAINING PROGRESS COMP STYLES */
+
+.progress-bar {
+    width: 100%;
+    height: 65px;
+    border-radius: 50px;
+    margin-top: 15px;
+    background-color: #FFF;
+    box-shadow: inset 0 0 0 2px #E7E5D9;
+}
+
+.progress-bar-fill {
+    height: 65px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #DCC773 0%, #8F9B8D 33%, #8BA974 66%, #4C633C 100%);
+}
+
+.progress-percentage {
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    margin-right: -120px;
+}
+
+.percentage-inside {
+    margin-right: 0px;
+}
+
+.percentage-inside h4 {
+    color: #FFF;
+}
+
+/**** WHEN width of .progress-bar-fill > 15% ****/
+.percentage-inside .progress-icon {
+    height: 30px;
+    filter: invert(100%) sepia(0%) saturate(7427%) hue-rotate(23deg) brightness(118%) contrast(118%);
+}
+
+@media (max-width: 768px) {
+    .progress-bar {
+        height: 55px;
+    }
+
+    .progress-bar-fill {
+        height: 55px;
+    }
+
+    .progress-percentage {
+        gap: 10px;
+    }
+
+    .percentage-inside h4 {
+        font-size: 21px;
+    }
+
+    .percentage-inside .progress-icon {
+        height: 26px;
+    }
+}
+
+/* TRAINING PROGRESS COMP STYLES */
+
+/* EVENT COUNTDOWN COMP STYLES */
+.event-goals-comp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-goals-comp-inner {
+    width: 100%;
+    background-color: #8F9B8D;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 55px 40px;
+    margin-top: 15px;
+}
+
+.goal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.goal-container p {
+    text-align: center;
+    color: #FFF;
+}
+
+.goal-number {
+    font-size: 70px;
+    line-height: 100%;
+    margin: 0;
+}
+
+.goal-container .body-copy {
+    font-weight: 500;
+}
+
+@media (max-width: 1279px) {
+    .goal-number {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 992px) {
+    .event-goals-comp .countdown-divider {
+        height: 85px;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-goals-comp-inner {
+        padding: 25px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .event-goals-comp .countdown-divider {
+        width: 80%;
+        height: 1px;
+        margin: auto;
+    }
+}
+
+/* EVENT COUNTDOWN COMP STYLES */
+
+/* VIEW SCHEDULE COMP STYLES */
+.view-schedule-comp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DCC773;
+    border-radius: 8px;
+    padding: 30px 50px;
+    box-sizing: border-box;
+}
+
+.view-schedule-comp h3 {
+    color: #FFF;
+}
+
+.view-schedule-comp .arrow {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .view-schedule-comp {
+        padding: 20px 5%;
+    }
+
+    .view-schedule-comp h3 {
+        font-size: 24px;
+    }
+}
+
+/* VIEW SCHEDULE COMP STYLES */

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/icons/trainr_icon.svg" />
+    <link href="./src/assets/styles/global.css" rel="stylesheet" />
+    <link href="./src/assets/styles/account.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | trainr</title>
+</head>
+
+<body>
+    <div class="nav" id="nav-placeholder">
+    </div>
+    <div id="main">
+        <div class="account-form" id="sign_in_form">
+            <img class="trainr-icon" src="./src/assets/icons/trainr_icon.svg" alt="trainr icon" />
+            <div class="associate-message hide-associate-message">
+                <p class="caption-copy">Sign In to save the event <nobr><span class="bold-text" id="associate_message_name"></span></nobr> to your account!
+                </p>
+            </div>
+            <div class="account-form-fields">
+                <div class="account-form-item item-error" id="username_item">
+                    <p class="caption-copy">username</p>
+                    <input type="text" id="username" name="username" maxlength="40" />
+                </div>
+                <div class="account-form-item" id="password_item">
+                    <p class="caption-copy">password</p>
+                    <input type="password" id="password" name="password" maxlength="40" />
+                </div>
+                <div class="account-error-message" id="error_no_account_exists">
+                    <p class="caption-copy error-text">Account does not exist.</p>
+                </div>
+                <div class="account-form-cta" id="sign_in_submit">
+                    <p class="body-copy bold-text">Sign In</p>
+                </div>
+                <a class="account-form-footer" href="/create-account">
+                    <p class="caption-copy green-copy">Don’t have an account?</p>
+                    <p class="caption-copy bold-text">Join for free!</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="trainr-popup-container" id="duplicate_event_popup">
+        <div class="trainr-popup">
+            <p class="caption-copy">You already have a generated plan for the event:<br /><span class="bold-text"
+                    id="popup_event_name"></span>
+            </p>
+            <p class="caption-copy">Would you like to replace it with the event:<br /><span class="bold-text"
+                    id="popup_new_event_name"></span></p>
+            <div class="form-cta" id="associator_replace_event_button">
+                <p class="caption-copy bold-text">Replace Event</p>
+            </div>
+            <p class="caption-copy form-hyperlink" id="associator_force_submit_button">Continue without previous event
+            </p>
+            <img class="close-popup" src="./src/assets/icons/x.svg" alt="Close Popup icon">
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/components/account.ts"></script>
+</body>
+
+</html>

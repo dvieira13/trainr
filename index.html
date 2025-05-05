@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./src/assets/icons/trainr_icon.svg" />
+  <link href="./src/assets/styles/global.css" rel="stylesheet" />
+  <link href="./src/assets/styles/index.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>trainr</title>
+</head>
+
+<body>
+  <div class="nav" id="nav-placeholder">
+  </div>
+  <div id="main">
+    <div class="banner-component">
+      <div class="banner-img-container">
+        <img class="banner-img" src="./src/assets/images/banner.png" alt="woman running on street" />
+      </div>
+      <div class="banner-text-block">
+        <img class="trainr-icon" src="./src/assets/icons/trainr_icon.svg" alt="trainr-icon" />
+        <div class="banner-text-block-inner">
+          <h4>Training is hard enough.</h4>
+          <h1>Let us take care of the planning.</h1>
+        </div>
+      </div>
+    </div>
+    <div class="desc-component">
+      <a class="desc-row" href="/generate-plan" title="Generate Plan">
+        <img class="desc-img" src="./src/assets/images/laptop.png" alt="person using laptop" />
+        <div class="desc-text-block">
+          <img class="desc-comp-icon generate-icon" src="./src/assets/icons/schedule.svg" alt="Generate Plan icon" />
+          <div class="desc-text-inner">
+            <h2>Generate a Plan</h2>
+            <h4>based on your specific goals and needs.</h4>
+            <div class="trainr-cta">
+              <p class="body-copy bold-text">Get Started</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="desc-row" href="/generate-plan" title="Generate Plan">
+        <img class="desc-img" src="./src/assets/images/runner.png" alt="man running on street" />
+        <div class="desc-text-block">
+          <img class="desc-comp-icon track-icon" src="./src/assets/icons/easy_run.svg" alt="Track Progress icon" />
+          <div class="desc-text-inner">
+            <h2>Track your progress</h2>
+            <h4>Easily log workouts to stay consistent.</h4>
+            <div class="trainr-cta">
+              <p class="body-copy bold-text">Get Started</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <a class="begin-component" href="/generate-plan">
+      <h2><span class="italic-text">trainr</span> is the all-in-one platform to help you crush your next running
+        milestone</h2>
+      <div class="trainr-cta">
+        <p class="body-copy bold-text">Get Started</p>
+      </div>
+    </a>
+    <div class="tools-component">
+      <h3>Check out our handy tools!</h3>
+      <div class="card-container">
+        <a class="card-link" href="/pace-calculator">
+          <h3>Pace<br />Calculator</h3>
+          <span class="arrow">
+            <span class="line"></span>
+            <span class="head"></span>
+          </span>
+        </a>
+        <a class="card-link" href="/workout-types">
+          <h3>Workout<br />Types</h3>
+          <span class="arrow">
+            <span class="line"></span>
+            <span class="head"></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

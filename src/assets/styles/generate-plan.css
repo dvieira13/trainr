@@ -1,0 +1,189 @@
+.page-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 50px auto;
+}
+
+.page-header h1 {
+    text-align: center;
+}
+
+.page-header .caption-copy {
+    font-size: 16px;
+    font-style: italic;
+    max-width: 300px;
+    text-align: center;
+}
+
+.generator-form {
+    width: 90%;
+    max-width: 800px;
+    padding: 40px 5%;
+    margin: auto;
+    background-color: #E7E5D9;
+    border-radius: 8px;
+}
+
+.generator-form-inner {
+    width: 80%;
+    margin: auto;
+}
+
+.generator-form-header {
+    margin-top: 30px;
+}
+
+.generator-form-inner>:first-child {
+    margin-top: 0;
+}
+
+.generator-form-header .body-copy {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.generator-form .form-item {
+    margin-top: 20px;
+}
+
+.generator-form input,
+.generator-form select {
+    width: 100%;
+}
+
+.generator-form .form-dropdown {
+    width: 100%;
+}
+
+.generator-form-divider {
+    height: 2px;
+    width: 100%;
+    background: #8BA974;
+    margin-top: 20px;
+}
+
+.performance-divider {
+    background: #8F9B8D;
+}
+
+.athlete-divider {
+    background: #4C633C;
+}
+
+.days-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 45px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 2px #4C633C;
+    cursor: pointer;
+}
+
+.day:hover {
+    background-color: #4C633C;
+}
+
+.day:hover .caption-copy {
+    color: #FFF;
+}
+
+.day .caption-copy {
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.day-selected {
+    background-color: #4C633C;
+}
+
+.day-selected .caption-copy {
+    color: #FFF;
+}
+
+.generator-form .form-cta {
+    margin: 40px auto 0;
+    max-width: 200px;
+}
+
+.trainr-popup-row {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.trainr-popup .form-cta {
+    margin: 30px auto 0;
+    max-width: 180px;
+}
+
+#account_event_popup .form-cta {
+    margin: 20px auto 0;
+    max-width: 190px;
+    padding: 0 20px;
+    width: 190px;
+}
+
+.form-hyperlink {
+    font-weight: 600;
+    text-decoration: 1px solid underline #000;
+    text-underline-offset: 3px;
+    font-size: 14px !important;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        gap: 20px;
+        margin: 30px auto;
+    }
+
+    .page-header .caption-copy {
+        font-size: 14px;
+    }
+
+    .generator-form {
+        padding: 25px 5%;
+    }
+
+    .generator-form-inner {
+        width: 100%;
+    }
+
+    .generator-form .form-item {
+        margin-top: 15px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .day {
+        width: 80px;
+    }
+
+    .day .caption-copy {
+        font-size: 11px;
+    }
+
+    .generator-form .form-cta {
+        margin: 30px auto 0;
+    }
+
+    .trainr-popup-row {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./src/assets/icons/trainr_icon.svg" />
+  <link href="./src/assets/styles/global.css" rel="stylesheet" />
+  <link href="./src/assets/styles/my-schedule.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Schedule | trainr</title>
+</head>
+
+<body>
+  <div class="nav" id="nav-placeholder">
+  </div>
+  <div id="main">
+    <div class="page-header">
+      <h1>My Schedule</h1>
+    </div>
+    <a class="generate-plan-comp hide-schedule-comp" href="/generate-plan">
+      <h5>ready to start training for your first event?</h5>
+      <h5>click here to generate your personalized schedule and get started</h5>
+      <span class="arrow">
+        <span class="line"></span>
+        <span class="head"></span>
+      </span>
+    </a>
+    <div class="schedule-comp hide-schedule-comp">
+      <div class="schedule-header">
+        <div class="schedule-title">
+          <h2>Marathon</h2>
+        </div>
+        <div class="trainr-cta" id="export_schedule_button">
+          <p class="body-copy bold-text">Export Schedule</p>
+        </div>
+      </div>
+      <div class="schedule-container">
+        <table class="schedule">
+          <thead class="schedule-head">
+            <tr>
+              <th>
+                <p class="caption-copy bold-text"><span class="desktop-only">Week</span><span class="mobile-only">#</span></p>
+              </th>
+              <th>
+                <p class="caption-copy bold-text">M<span class="desktop-only">onday</span></p>
+              </th>
+              <th>
+                <p class="caption-copy bold-text">T<span class="desktop-only">uesday</span></p>
+              </th>
+              <th>
+                <p class="caption-copy bold-text">W<span class="desktop-only">ednesday</span></p>
+              </th>
+              <th>
+                <p class="caption-copy bold-text">T<span class="desktop-only">hursday</span></p>
+              </th>
+              <th>
+                <p class="caption-copy bold-text">F<span class="desktop-only">riday</span></p>
+              </th>
+              <th>
+                <p class="caption-copy bold-text">S<span class="desktop-only">aturday</span></p>
+              </th>
+              <th>
+                <p class="caption-copy bold-text">S<span class="desktop-only">unday</span></p>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="schedule-body">
+            <!-- SCHEDULE ROWS INSERTED HERE DYNAMICALLY BY my_schedule.ts -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="workout-popup-container" id="workout_popup">
+    <div class="workout-popup">
+      <div class="workout-popup-header">
+        <div class="popup-header-row">
+          <div class="popup-distance-container">
+            <h2 id="popup_distance">miles</h2>
+            <p class="body-copy mobile-only popup_pace">target pace</p>
+          </div>
+          <div class="popup-workout-type-container">
+            <img class="popup-icon" id="popup_icon" src="./src/assets/icons/easy_run.svg" alt="workout type icon" />
+            <a id="popup_type" target="_blank">
+              <h5></h5>
+            </a>
+          </div>
+        </div>
+        <p class="body-copy desktop-only popup_pace">target pace</p>
+      </div>
+      <div class="workout-popup-form">
+        <div class="popup-form-row">
+          <div class="popup-form-column">
+            <div class="form-item" id="popup_time_item">
+              <p class="body-copy">Total Time</p>
+              <input type="text" id="popup_time" name="popup_time" maxlength="8" />
+              <p class="caption-copy">hh:mm:ss</p>
+            </div>
+            <div class="form-item" id="popup_difficulty_item">
+              <p class="body-copy">Difficulty</p>
+              <div class="form-dropdown">
+                <select class="event-selector" id="popup_difficulty" name="popup_difficulty">
+                  <option hidden disabled selected value></option>
+                  <option value="Easy">Easy</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Difficult">Difficult</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-item" id="popup_notes_item">
+            <p class="body-copy">Notes</p>
+            <textarea type="text" id="popup_notes" name="popup_notes" maxlength="400"
+              placeholder="How'd it go?"></textarea>
+          </div>
+        </div>
+        <div class="popup-form-row">
+          <div class="form-checkbox-item">
+            <div class="form-checkbox"></div>
+            <p class="body-copy">Workout Complete</p>
+          </div>
+          <div class="form-cta" id="workout_popup_save_button">
+            <p class="caption-copy bold-text">Save</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <img class="close-popup" src="./src/assets/icons/collapse.svg" alt="Close Popup icon">
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="./src/components/my_schedule.ts"></script>
+</body>
+
+</html>

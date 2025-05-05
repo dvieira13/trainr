@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/icons/trainr_icon.svg" />
+    <link href="./src/assets/styles/global.css" rel="stylesheet" />
+    <link href="./src/assets/styles/pace-calculator.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pace Calculator | trainr</title>
+</head>
+
+<body>
+    <div class="nav" id="nav-placeholder">
+    </div>
+    <div id="main">
+        <div class="page-header">
+            <h1>Pace Calculator</h1>
+        </div>
+        <div class="pace-calculator">
+            <div class="calculator-menu">
+                <div class="menu-option active-menu-option" id="calculate_pace">
+                    <p class="body-copy bold-text">Pace</p>
+                </div>
+                <div class="menu-option" id="calculate_time">
+                    <p class="body-copy bold-text">Time</p>
+                </div>
+                <div class="menu-option" id="calculate_distance">
+                    <p class="body-copy bold-text">Distance</p>
+                </div>
+            </div>
+            <div class="calculator">
+                <div class="calculator-inner active-calculator" id="pace_calculator">
+                    <div class="calculator-header">
+                        <p class="caption-copy">Calculate required pace given target distance and time.</p>
+                        <div class="calculator-divider"></div>
+                    </div>
+                    <div class="calculator-form">
+                        <div class="form-row">
+                            <div class="form-item" id="pace_distance_item">
+                                <p class="body-copy">Distance</p>
+                                <input class="custom-distance" type="text" id="pace_distance" name="pace_distance" maxlength="10" />
+                                <p class="caption-copy">miles</p>
+                            </div>
+                            <div class="form-item" id="pace_time_item">
+                                <p class="body-copy">Time</p>
+                                <input type="text" id="pace_time" name="pace_time" maxlength="10" />
+                                <p class="caption-copy">hh:mm:ss</p>
+                            </div>
+                            <div class="form-cta desktop-cta" id="submit_pace">
+                                <p class="caption-copy bold-text">Calculate</p>
+                            </div>
+                        </div>
+                        <div class="form-item" id="pace_event_item">
+                            <p class="body-copy">OR Select Event</p>
+                            <div class="form-dropdown">
+                                <select class="event-selector" id="pace_event" name="pace_event">
+                                    <option hidden disabled selected value></option>
+                                    <option value="3.1">5k</option>
+                                    <option value="6.2">10k</option>
+                                    <option value="13.1">Half Marathon</option>
+                                    <option value="26.2">Marathon</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-cta mobile-cta" id="mobile_submit_pace">
+                            <p class="caption-copy bold-text">Calculate</p>
+                        </div>
+                    </div>
+                    <div class="calculator-result">
+                        <h5 class="bold-text">Result</h5>
+                        <div class="result-container">
+                            <p class="body-copy">Pace:</p>
+                            <div class="result-list">
+                                <div class="result">
+                                    <p class="body-copy" id="pace_result_miles"></p>
+                                    <p class="caption-copy">per mile</p>
+                                </div>
+                                <div class="result">
+                                    <p class="body-copy" id="pace_result_kilometers"></p>
+                                    <p class="caption-copy">per kilometer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-inner" id="time_calculator">
+                    <div class="calculator-header">
+                        <p class="caption-copy">Calculate total time given target distance and pace.</p>
+                        <div class="calculator-divider"></div>
+                    </div>
+                    <div class="calculator-form">
+                        <div class="form-row">
+                            <div class="form-item" id="time_distance_item">
+                                <p class="body-copy">Distance</p>
+                                <input class="custom-distance" type="text" id="time_distance" name="time_distance" maxlength="10" />
+                                <p class="caption-copy">miles</p>
+                            </div>
+                            <div class="form-item" id="time_pace_item">
+                                <p class="body-copy">Pace</p>
+                                <input type="text" id="time_pace" name="time_pace" maxlength="10" />
+                                <p class="caption-copy">mm:ss - per mile</p>
+                            </div>
+                            <div class="form-cta desktop-cta" id="submit_time">
+                                <p class="caption-copy bold-text">Calculate</p>
+                            </div>
+                        </div>
+                        <div class="form-item" id="time_event_item">
+                            <p class="body-copy">OR Select Event</p>
+                            <div class="form-dropdown">
+                                <select class="event-selector" id="time_event" name="time_event">
+                                    <option hidden disabled selected value></option>
+                                    <option value="3.1">5k</option>
+                                    <option value="6.2">10k</option>
+                                    <option value="13.1">Half Marathon</option>
+                                    <option value="26.2">Marathon</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-cta mobile-cta" id="mobile_submit_time">
+                            <p class="caption-copy bold-text">Calculate</p>
+                        </div>
+                    </div>
+                    <div class="calculator-result">
+                        <h5 class="bold-text">Result</h5>
+                        <div class="result-container">
+                            <p class="body-copy">Time:</p>
+                            <div class="result-list">
+                                <div class="result">
+                                    <p class="body-copy" id="time_result"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-inner" id="distance_calculator">
+                    <div class="calculator-header">
+                        <p class="caption-copy">Calculate total distance given target pace and time.</p>
+                        <div class="calculator-divider"></div>
+                    </div>
+                    <div class="calculator-form">
+                        <div class="form-row">
+                            <div class="form-item" id="distance_pace_item">
+                                <p class="body-copy">Pace</p>
+                                <input type="text" id="distance_pace" name="distance_distance" maxlength="10" />
+                                <p class="caption-copy">mm:ss - per mile</p>
+                            </div>
+                            <div class="form-item" id="distance_time_item">
+                                <p class="body-copy">Time</p>
+                                <input type="text" id="distance_time" name="distance_time" maxlength="10" />
+                                <p class="caption-copy">hh:mm:ss</p>
+                            </div>
+                            <div class="form-cta" id="submit_distance">
+                                <p class="caption-copy bold-text">Calculate</p>
+                            </div>
+                        </div>
+                        <div class="form-cta mobile-cta" id="mobile_submit_distance">
+                            <p class="caption-copy bold-text">Calculate</p>
+                        </div>
+                    </div>
+                    <div class="calculator-result">
+                        <h5 class="bold-text">Result</h5>
+                        <div class="result-container">
+                            <p class="body-copy">Distance:</p>
+                            <div class="result-list">
+                                <div class="result">
+                                    <p class="body-copy" id="distance_result_miles"></p>
+                                    <p class="caption-copy">miles</p>
+                                </div>
+                                <div class="result">
+                                    <p class="body-copy" id="distance_result_kilometers"></p>
+                                    <p class="caption-copy">kilometers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/components/pace_calculator.ts"></script>
+</body>
+
+</html>

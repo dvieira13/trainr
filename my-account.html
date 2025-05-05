@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/icons/trainr_icon.svg" />
+    <link href="./src/assets/styles/global.css" rel="stylesheet" />
+    <link href="./src/assets/styles/my-account.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trainr</title>
+</head>
+
+<body>
+    <div class="nav" id="nav-placeholder">
+    </div>
+    <div id="main">
+        <div class="account-dashboard">
+            <div class="user-panel">
+                <h1 id="user_name"></h1>
+                <div class="panel-divider"></div>
+                <p class="body-copy bold-text">Totals</p>
+                <div class="user-panel-stats">
+                    <div class="user-panel-row">
+                        <p class="body-copy">Miles</p>
+                        <p class="caption-copy bold-text" id="user_miles"></p>
+                    </div>
+                    <div class="user-panel-row">
+                        <p class="body-copy">Workouts</p>
+                        <p class="caption-copy bold-text" id="user_workouts"></p>
+                    </div>
+                    <div class="user-panel-row">
+                        <p class="body-copy">Time</p>
+                        <p class="caption-copy bold-text" id="user_time"></p>
+                    </div>
+                </div>
+                <div class="trainr-cta">
+                    <p class="body-copy bold-text">Account Settings</p>
+                </div>
+            </div>
+            <div class="dashboard-content">
+                <a class="generate-plan-comp no_event_comp hide-account-comp" href="/generate-plan">
+                    <h5>ready to start training for your first event?</h5>
+                    <h5>click here to generate your personalized schedule and get started</h5>
+                    <span class="arrow">
+                        <span class="line"></span>
+                        <span class="head"></span>
+                    </span>
+                </a>
+                <div class="my-event-header-comp has_event_comp hide-account-comp">
+                    <div class="event-title">
+                        <p class="body-copy">My Event</p>
+                        <h2 id="event_name"></h2>
+                    </div>
+                    <a class="trainr-cta" href="/my-schedule">
+                        <p class="body-copy bold-text">My Schedule</p>
+                    </a>
+                </div>
+                <div class="event-countdown-comp has_event_comp hide-account-comp">
+                    <div class="countdown-container">
+                        <p class="countdown-number bold-text" id="days_until_race"></p>
+                        <p class="body-copy">days until race day</p>
+                    </div>
+                    <div class="countdown-divider"></div>
+                    <div class="countdown-container">
+                        <p class="countdown-number bold-text" id="workouts_remaining"></p>
+                        <p class="body-copy">workouts remaining</p>
+                    </div>
+                </div>
+                <div class="training-progress-comp has_event_comp hide-account-comp">
+                    <p class="body-copy">Training Progress</p>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" style="width: 67%">
+                            <div class="progress-percentage percentage-inside">
+                                <h4 id="training_progress">67%</h4>
+                                <img class="progress-icon" src="./src/assets/icons/easy_run.svg"
+                                    alt="training progress icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-goals-comp has_event_comp hide-account-comp">
+                    <p class="body-copy">Event Goals</p>
+                    <div class="event-goals-comp-inner">
+                        <div class="goal-container">
+                            <p class="goal-number bold-text" id="total_time_goal">3:29:59</p>
+                            <p class="body-copy">total time</p>
+                        </div>
+                        <div class="countdown-divider"></div>
+                        <div class="goal-container">
+                            <p class="goal-number bold-text" id="avg_pace_goal">8:02</p>
+                            <p class="body-copy">avg mile pace</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="view-schedule-comp has_event_comp hide-account-comp" href="/my-schedule">
+                    <h3>My<br />Schedule</h3>
+                    <span class="arrow">
+                        <span class="line"></span>
+                        <span class="head"></span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/components/my_account.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/icons/trainr_icon.svg" />
+    <link href="./src/assets/styles/global.css" rel="stylesheet" />
+    <link href="./src/assets/styles/account.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account | trainr</title>
+</head>
+
+<body>
+    <div class="nav" id="nav-placeholder">
+    </div>
+    <div id="main">
+        <div class="account-form" id="create_account_form">
+            <img class="trainr-icon" src="./src/assets/icons/trainr_icon.svg" alt="trainr icon" />
+            <div class="associate-message hide-associate-message">
+                <p class="caption-copy">Create an Account to save the event <nobr><span class="bold-text"
+                        id="associate_message_name"></span></nobr> to your account!
+                </p>
+            </div>
+            <div class="account-form-fields">
+                <div class="account-form-row">
+                    <div class="account-form-item" id="first_name_item">
+                        <p class="caption-copy">first name</p>
+                        <input type="text" id="first_name" name="first_name" maxlength="40" />
+                    </div>
+                    <div class="account-form-item" id="last_name_item">
+                        <p class="caption-copy">last name</p>
+                        <input type="text" id="last_name" name="last_name" maxlength="40" />
+                    </div>
+                </div>
+                <div class="account-form-item item-error" id="username_item">
+                    <p class="caption-copy">username</p>
+                    <input type="text" id="username" name="username" maxlength="40" />
+                </div>
+                <div class="account-form-item" id="password_item">
+                    <p class="caption-copy">password</p>
+                    <input type="password" id="password" name="password" maxlength="40" />
+                </div>
+                <div class="account-form-item" id="confirm-password_item">
+                    <p class="caption-copy">confirm password</p>
+                    <input type="password" id="confirm_password" name="confirm_password" maxlength="40" />
+                </div>
+                <div class="account-error-message" id="error_password_match">
+                    <p class="caption-copy error-text">Passwords do not match.</p>
+                </div>
+                <div class="account-error-message" id="error_account_exists">
+                    <p class="caption-copy error-text">Account with this username already exists.</p>
+                </div>
+                <div class="account-form-cta" id="sign_in_submit">
+                    <p class="body-copy bold-text">Create Account</p>
+                </div>
+                <a class="account-form-footer" href="/sign-in">
+                    <p class="caption-copy green-copy">Already have an account? </p>
+                    <p class="caption-copy bold-text">Sign In</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/components/account.ts"></script>
+</body>
+
+</html>

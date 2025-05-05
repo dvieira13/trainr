@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./src/assets/icons/trainr_icon.svg" />
+  <link href="./src/assets/styles/global.css" rel="stylesheet" />
+  <link href="./src/assets/styles/generate-plan.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generate Plan | trainr</title>
+</head>
+
+<body>
+  <div class="nav" id="nav-placeholder">
+  </div>
+  <div id="main">
+    <div class="page-header">
+      <h1>Training Plan Generator</h1>
+      <p class="caption-copy">Complete this form to generate your personalized training plan</p>
+    </div>
+    <div class="generator-form" id="generator_form">
+      <div class="generator-form-inner">
+        <div class="generator-form-header">
+          <p class="body-copy">Event Information</p>
+          <div class="generator-form-divider"></div>
+        </div>
+        <div class="form-item" id="event_name_item">
+          <p class="body-copy">Name</p>
+          <input class="custom-distance" type="text" id="event_name" name="event_name" maxlength="40" />
+        </div>
+        <div class="form-row">
+          <div class="form-item" id="event_distance_item">
+            <p class="body-copy">Distance</p>
+            <div class="form-dropdown">
+              <select class="event-selector" id="event_distance" name="event_distance">
+                <option hidden disabled selected value></option>
+                <option value="3.1">5k</option>
+                <option value="6.2">10k</option>
+                <option value="13.1">Half Marathon</option>
+                <option value="26.2">Marathon</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-item" id="event_date_item">
+            <p class="body-copy">Date</p>
+            <input type="date" id="event_date" name="event_date" />
+          </div>
+        </div>
+        <div class="generator-form-header">
+          <p class="body-copy">Performance Goal</p>
+          <div class="generator-form-divider performance-divider"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-item" id="event_goal_time_item">
+            <p class="body-copy">Final Time</p>
+            <input type="text" id="event_goal_time" name="event_goal_time" maxlength="8" />
+            <p class="caption-copy">hh:mm:ss</p>
+          </div>
+          <div class="form-item" id="event_goal_pace_item">
+            <p class="body-copy">OR Pace</p>
+            <input type="text" id="event_goal_pace" name="event_goal_pace" maxlength="5" />
+            <p class="caption-copy">per mile</p>
+          </div>
+        </div>
+        <div class="generator-form-header">
+          <p class="body-copy">Athlete Information</p>
+          <div class="generator-form-divider athlete-divider"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-item" id="athlete_weeks_to_train_item">
+            <p class="body-copy">Weeks to Train</p>
+            <input type="number" id="athlete_weeks_to_train" name="athlete_weeks_to_train" maxlength="10" />
+          </div>
+          <div class="form-item" id="athlete_experience_item">
+            <p class="body-copy">Experience Level</p>
+            <div class="form-dropdown">
+              <select class="event-selector" id="athlete_experience" name="athlete_experience">
+                <option hidden disabled selected value></option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Experienced">Experienced</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-item" id="athlete_days_item">
+          <p class="body-copy">Which days can you train?</p>
+          <div class="days-container">
+            <div class="day">
+              <p class="caption-copy">Sunday</p>
+            </div>
+            <div class="day">
+              <p class="caption-copy">Monday</p>
+            </div>
+            <div class="day">
+              <p class="caption-copy">Tuesday</p>
+            </div>
+            <div class="day">
+              <p class="caption-copy">Wednesday</p>
+            </div>
+            <div class="day">
+              <p class="caption-copy">Thursday</p>
+            </div>
+            <div class="day">
+              <p class="caption-copy">Friday</p>
+            </div>
+            <div class="day">
+              <p class="caption-copy">Saturday</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-cta" id="generator_submit_button">
+          <p class="caption-copy bold-text">Generate</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trainr-popup-container" id="duplicate_event_popup">
+    <div class="trainr-popup">
+      <p class="caption-copy">You already have a generated plan for the event:<br /><span class="bold-text"
+          id="popup_event_name"></span>
+      </p>
+      <p class="caption-copy">Would you like to continue with generation and replace this event?</p>
+      <div class="form-cta" id="generator_submit_confirm_button">
+        <p class="caption-copy bold-text">Generate</p>
+      </div>
+      <img class="close-popup" src="./src/assets/icons/x.svg" alt="Close Popup icon">
+    </div>
+  </div>
+  <div class="trainr-popup-container" id="account_event_popup">
+    <div class="trainr-popup">
+      <p class="caption-copy">Would you you like to Sign In or <nobr>Create an Account</nobr> to save and revisit your personalized
+        workout plan?
+      </p>
+      <div class="trainr-popup-row">
+        <div class="form-cta" id="generator_sign_in_button">
+          <p class="caption-copy bold-text">Sign In</p>
+        </div>
+        <div class="form-cta" id="generator_create_account_button">
+          <p class="caption-copy bold-text">Create Account</p>
+        </div>
+      </div>
+      <p class="caption-copy form-hyperlink" id="generator_force_submit_button">Continue without account</p>
+      <img class="close-popup" src="./src/assets/icons/x.svg" alt="Close Popup icon">
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="./src/components/generate_plan.ts"></script>
+</body>
+
+</html>

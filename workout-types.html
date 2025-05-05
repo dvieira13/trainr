@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/icons/trainr_icon.svg" />
+    <link href="./src/assets/styles/global.css" rel="stylesheet" />
+    <link href="./src/assets/styles/workout-types.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Types | trainr</title>
+</head>
+
+<body>
+    <div class="nav" id="nav-placeholder">
+    </div>
+    <div id="main">
+        <div class="page-header">
+            <h1>Workout Types</h1>
+        </div>
+        <div class="workout-types">
+            <div class="workout" id="easy_run">
+                <div class="workout-inner">
+                    <div class="workout-header">
+                        <div class="workout-left-rail">
+                            <img class="workout-icon" src="./src/assets/icons/easy_run.svg" alt="Easy Run icon" />
+                        </div>
+                        <div class="workout-header-inner">
+                            <div class="workout-header-title">
+                                <h4>Easy Run</h4>
+                                <div class="workout-icon-container">
+                                    <img class="workout-toggle-icon workout-open" src="./src/assets/icons/close.svg"
+                                        alt="Toggle icon">
+                                </div>
+                            </div>
+                            <div class="workout-divider"></div>
+                        </div>
+                    </div>
+                    <p class="caption-copy">In a general sense, an easy run is a low-intensity effort of a short to
+                        moderate duration. Runners can’t really go too slow on their easy days, unless their form starts
+                        to break down. At that point, slower becomes counterproductive. As long as your form holds up,
+                        lower intensity trumps higher intensity for easy days.</p>
+                    <p class="caption-copy">These types of runs improve cardiovascular and muscular development, meaning
+                        they will help boost overall fitness levels and play a big factor in what allows runners to
+                        safely increase mileage week after week.</p>
+                </div>
+            </div>
+            <div class="workout" id="tempo_run">
+                <div class="workout-inner">
+                    <div class="workout-header">
+                        <div class="workout-left-rail">
+                            <img class="workout-icon" src="./src/assets/icons/tempo_run.svg" alt="Tempo Run icon" />
+                        </div>
+                        <div class="workout-header-inner">
+                            <div class="workout-header-title">
+                                <h4>Tempo Run</h4>
+                                <div class="workout-icon-container">
+                                    <img class="workout-toggle-icon workout-open" src="./src/assets/icons/close.svg"
+                                        alt="Toggle icon">
+                                </div>
+                            </div>
+                            <div class="workout-divider"></div>
+                        </div>
+                    </div>
+                    <p class="caption-copy">Tempos, also known as threshold runs, are runs at an effort that’s equal
+                        to—or slightly above—your anaerobic threshold (the marker in which your body shifts to using
+                        more glycogen for energy) as the filling. This is the effort level just outside your comfort
+                        zone—you can hear your breathing, but you’re not gasping for air.
+                    </p>
+                    <p class="caption-copy">If you can talk easily, you’re not in the tempo zone, and if you can’t talk
+                        at all, you’re above the zone. It should be at an effort somewhere in the middle, a “comfortably
+                        hard” effort that allows you to talk in broken words and hold that effort for at least 20
+                        minutes.</p>
+                    <p class="caption-copy">Tempo runs increased lactate threshold so you can run faster at easier
+                        effort levels. They also improve focus, race simulation, and mental strength.</p>
+                </div>
+            </div>
+            <div class="workout" id="long_run">
+                <div class="workout-inner">
+                    <div class="workout-header">
+                        <div class="workout-left-rail">
+                            <img class="workout-icon" src="./src/assets/icons/long_run.svg" alt="Long Run icon" />
+                        </div>
+                        <div class="workout-header-inner">
+                            <div class="workout-header-title">
+                                <h4>Long Run</h4>
+                                <div class="workout-icon-container">
+                                    <img class="workout-toggle-icon workout-open" src="./src/assets/icons/close.svg"
+                                        alt="Toggle icon">
+                                </div>
+                            </div>
+                            <div class="workout-divider"></div>
+                        </div>
+                    </div>
+                    <p class="caption-copy">As the name implies, long runs are the longest runs on your weekly schedule.
+                        Your pace for your long run will also vary depending on your fitness level and goals. But
+                        generally speaking, you should conquer long runs at a conversational pace, meaning you could
+                        chat with your running buddy the entire time and breathe naturally.</p>
+                    <p class="caption-copy">These runs will help improve you aerobic fitness and endurance, helping you
+                        become a more efficient runner. You will strengthen your slow-twitch muscle fibers, which help
+                        stave off fatigue in the later miles of a run or race.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/components/workout_types.ts"></script>
+</body>
+
+</html>

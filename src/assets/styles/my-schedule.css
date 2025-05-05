@@ -1,0 +1,490 @@
+.schedule-comp {
+    width: 90%;
+    margin: auto;
+}
+
+.hide-schedule-comp {
+    display: none !important;
+}
+
+.schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.schedule-title {
+    border-radius: 8px 8px 0 0;
+    background-color: #4C633C;
+    padding: 25px 40px;
+}
+
+.schedule-title h2 {
+    color: #FFF;
+}
+
+.schedule-header .trainr-cta {
+    max-width: 200px;
+    width: 200px;
+}
+
+.schedule {
+    width: calc(100% + 4px);
+    margin-left: -2px;
+    table-layout: fixed;
+}
+
+.schedule-head {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.schedule th {
+    background-color: #4C633C;
+    padding: 20px 12px;
+}
+
+.schedule th .caption-copy {
+    color: #FFF;
+    text-align: center;
+}
+
+.schedule tr>:first-child {
+    width: 5%;
+}
+
+.schedule-body>:nth-child(odd) td {
+    background-color: #E7E5D9;
+}
+
+.schedule-body>:nth-child(even) td {
+    background-color: #8F9B8D;
+}
+
+.week-label h5 {
+    text-align: center;
+}
+
+.workout-cell {
+    padding: 35px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.workout-cell p,
+.workout-cell .expand-icon {
+    pointer-events: none;
+}
+
+.workout-cell:hover .expand-icon {
+    display: block;
+}
+
+.cell-completed {
+    background-color: #DCC773 !important;
+}
+
+.cell-completed .checkbox {
+    background-color: #000;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 1px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.checkbox:hover {
+    background-color: #000;
+}
+
+.expand-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: none;
+}
+
+.schedule td p {
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .schedule-comp {
+        width: 95%;
+    }
+
+    .schedule-title {
+        padding: 15px 30px;
+    }
+
+    .schedule-title h2 {
+        font-size: 28px;
+    }
+
+    .schedule th {
+        padding: 20px 8px;
+    }
+
+    .schedule th .caption-copy {
+        font-size: 13px;
+    }
+
+    .workout-cell {
+        padding: 20px 0 30px;
+    }
+
+    .checkbox {
+        display: none;
+    }
+
+    .expand-icon {
+        display: block;
+        width: 10px;
+        bottom: 5px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        justify-content: center;
+    }
+
+    .schedule-title {
+        padding: 10px 20px;
+    }
+
+    .schedule-title h2 {
+        font-size: 21px;
+    }
+
+    .schedule-header .trainr-cta {
+        max-width: 150px;
+        width: 150px;
+    }
+
+    .trainr-cta .body-copy {
+        font-size: 14px;
+    }
+
+    .schedule th {
+        padding: 10px 8px;
+    }
+
+    .schedule tr>:first-child {
+        width: 3%;
+    }
+
+    .week-label h5 {
+        font-size: 16px;
+    }
+
+    .schedule td .body-copy {
+        font-size: 14px;
+    }
+
+    .schedule td .caption-copy {
+        font-size: 11px;
+    }
+
+    .workout-cell {
+        padding: 15px 3px 25px;
+    }
+
+    .expand-icon {
+        width: 8px;
+        bottom: 6px;
+        right: 6px;
+    }
+}
+
+@media (max-width: 550px) {
+    .schedule td .body-copy {
+        font-size: 10px;
+    }
+
+    .schedule td .caption-copy {
+        font-size: 8px;
+    }
+
+    .workout-cell {
+        padding: 10px 3px 15px;
+    }
+
+    .expand-icon {
+        width: 6px;
+        bottom: 4px;
+        right: 4px;
+    }
+}
+
+/* WORKOUT POPUP STYLES */
+.workout-popup-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.40);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.workout-popup-header {
+    background-color: #E7E5D9;
+    border-radius: 8px 0 8px 0;
+    padding: 30px 50px;
+    width: fit-content;
+}
+
+.workout-popup {
+    background-color: #FFF;
+    border-radius: 8px;
+    width: fit-content;
+    position: relative;
+    max-width: 90%;
+}
+
+.workout-popup .close-popup {
+    position: absolute;
+    width: 30px;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.popup-header-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.popup-workout-type-container {
+    display: flex;
+    gap: 30px;
+}
+
+.popup-header-row h5 {
+    font-weight: 400;
+}
+
+.popup-icon {
+    height: 30px;
+}
+
+.workout-popup-header a {
+    text-decoration: 1px solid underline #000;
+    text-underline-offset: 3px;
+}
+
+.workout-popup-form {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.popup-form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.popup-form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.workout-popup-form textarea {
+    width: 370px;
+    height: 100%;
+    resize: none;
+}
+
+#popup_notes_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.workout-popup-form input,
+.workout-popup-form select,
+.workout-popup-form textarea {
+    border: 1px solid #E7E5D9;
+}
+
+.form-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: fit-content;
+}
+
+.form-checkbox {
+    border-radius: 8px;
+    border: 1px solid #E7E5D9;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+.checkbox-selected {
+    background-color: #000;
+}
+
+@media (max-width: 992px) {
+    .workout-popup-form textarea {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .workout-popup {
+        width: 90%;
+    }
+
+    .workout-popup-header {
+        padding: 20px 25% 20px 8%;
+    }
+
+    .popup-header-row {
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+    }
+
+    .workout-popup-header h2 {
+        font-size: 28px;
+    }
+
+    .workout-popup-header .body-copy {
+        font-size: 16px;
+    }
+
+    .workout-popup-header h5 {
+        font-size: 18px;
+    }
+
+    .popup-icon {
+        height: 21px;
+    }
+
+    .popup-workout-type-container {
+        gap: 15px;
+    }
+
+    .workout-popup-form {
+        padding: 5%;
+        gap: 10px;
+    }
+
+    .workout-popup-form>:last-child {
+        gap: 20px;
+    }
+
+    .popup-form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .workout-popup-form textarea {
+        width: 100%;
+        height: 100px;
+    }
+
+    .workout-popup .close-popup {
+        width: 25px;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/* WORKOUT POPUP STYLES */
+
+/* GENERATE PLAN COMP STYLES */
+.generate-plan-comp {
+    background-color: #4C633C;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 5%;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.generate-plan-comp h5 {
+    font-weight: 500;
+    max-width: 660px;
+    color: #FFF;
+    text-align: center;
+}
+
+.generate-plan-comp>:first-child {
+    margin-bottom: 15px;
+}
+
+.generate-plan-comp .arrow {
+    margin: 30px auto 0;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.arrow .line {
+    width: 100px;
+    max-width: 150px;
+    height: 3px;
+    background-color: #FFF;
+    transition: .8s;
+}
+
+.arrow .head {
+    border: solid #FFF;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 15px;
+    margin-left: -37px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+@media (min-width: 993px) {
+    .generate-plan-comp:hover .line {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .generate-plan-comp {
+        padding: 30px 5%;
+    }
+
+    .generate-plan-comp h5 {
+        font-size: 18px;
+    }
+
+    .generate-plan-comp>:first-child {
+        margin-bottom: 10px;
+    }
+
+    .generate-plan-comp .arrow {
+        margin: 20px auto 0;
+    }
+}
+
+/* GENERATE PLAN COMP STYLES */
