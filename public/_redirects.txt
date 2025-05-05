@@ -5,7 +5,7 @@
 /sign-in       /sign-in.html     200
 /my-account       /my-account.html     200
 /workout-types       /workout-types.html     200
-/src/assets/*    /src/assets/:splat    200
+/src/assets/styles/*    /src/assets/styles/:splat    200
 /src/components/*    /src/components/:splat    200
 /src/main.ts   /src/main.ts    200
 /*        /index.html   200
