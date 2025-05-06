@@ -1,9 +1,8 @@
-/create-account     /create-account.html   200
-/generate-plan       /generate-plan.html     200
-/my-schedule       /my-schedule.html     200
-/pace-calculator       /pace-calculator.html     200
-/sign-in       /sign-in.html     200
-/my-account       /my-account.html     200
-/workout-types       /workout-types.html     200
-/*        /index.html   200
+# Allow Vite-generated JS/CSS/Assets
+/assets/*    /assets/:splat    200
 
+# Allow direct HTML routes (fallback)
+/*.html       /:splat          200
+
+# Let Vite handle SPA routing if needed
+/*           /index.html       200
